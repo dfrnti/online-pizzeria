@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина товаров</title>
+    <link rel="stylesheet" href="../css/cart-style.css">
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" id="menu-toggle" hidden />
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        
+            <div class="brand-label">
+                <a href="/pages/index.html">Пиццерия</a>
+            </div>
+        <div style="flex-grow: 1"></div> 
+        <div class="contact-info">
+            <a href="tel:+79999999999"><strong>+7 (999) 999-99-99</strong></a><br/>
+            Позвонить нам
+        </div>
+        <nav class="main-nav">
+            <a href="/pages/pizzapedia.html">Пиццапедия</a>
+            <a href="/pages/cart.html" class="icon-cart">
+                🛒
+                <span class="cart-details">
+                    <span class="total-sum">0 ₽</span>
+                    |
+                    <span class="item-count">0 шт.</span>
+                </span>
+            </a>
+            <a href="/pages/register.html">Регистрация</a>
+            <a href="/pages/log-in.html">Вход</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Моя корзина</h1>
+        <div class="cartitems" id="cartItems">
+        </div>
+        <div class="checkout-block">
+            <div class="checkout-total">
+                <span>Общая сумма:</span>
+                <span class="total-amount">0 ₽</span>
+            </div>
+            <button class="continue-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="left-block">
+            <h2 class="logo">
+                <a href="/pages/index.html">Пиццерия</a>
+            </h2>
+            <div class="contact-info">
+                <p><a href="tel:+79999999999">+7(999) 999-99-99</a></p>
+                <span>Позвонить нам</span><br />
+                <a href="mailto:pizza@example.com">pizza@example.com</a>
+            </div>
+        </div>
+
+        <div class="right-block">
+            <div class="social-icons">
+                <a href="https://t.me" target="_blank"><img src="../src/icon/tg.svg" alt="Telegram" width="30"></a>
+                <a href="https://vk.com" target="_blank"><img src="../src/icon/vk.svg" alt="VK" width="30"></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2025 Все права защищены.
+        </div>
+    </footer>
+
+
+
+    <script type="module" src="/js/cart.js" ></script>
+    <script type="module" src="/js/headerupdate.js" ></script>
+</body>
+</html>
