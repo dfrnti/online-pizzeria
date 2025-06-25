@@ -31,7 +31,7 @@ const verificationCode = document.getElementById('verificationCode');
 verificationCode.addEventListener('input', function(){
     if(this.value.length >= 6) {
         if(this.value.match(/^[0-9]{3}-?[0-9]{3}$/)) {
-            window.location.href = '../gh-pages/index.html';
+            window.location.href = '/index.html';
         }
     }
 });
