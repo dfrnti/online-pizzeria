@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" id="menu-toggle" hidden />
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        
+        <div class="brand-label">
+            <a href="/index.html">Пиццерия</a>
+        </div>
+        <div style="flex-grow: 1"></div> 
+        <div class="contact-info">
+            <a href="tel:+79999999999"><strong>+7 (999) 999-99-99</strong></a><br/>
+            Позвонить нам
+        </div>
+        <nav class="main-nav">
+            <a href="/pizzapedia.html">Пиццапедия</a>
+            <a href="/cart.html" class="icon-cart">
+                🛒
+                <span class="cart-details">
+                    <span class="total-sum">0 ₽</span>
+                    |
+                    <span class="item-count">0 шт.</span>
+                </span>
+            </a>
+            <a href="/register.html">Регистрация</a>
+            <a href="/login.html">Вход</a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Авторизация</h2>
+        <form id="authorizationForm">
+            <input type="tel" id="phone" name="phone" placeholder="Номер телефона" required autocomplete="tel"/>
+            
+            <button type="button" id="sendCodeBtn" disabled>Отправить код</button>
+            
+            <div class="code-input" style="display:none;"> 
+                <input type="text" id="verificationCode" name="verificationCode" placeholder="XXX-XXX" maxlength="6" pattern="^[0-9]{3}-?[0-9]{3}$" required autocomplete="one-time-code"/>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/login.js"></script>
+    <script type="module" src="/js/headerupdate.js" ></script>
+    
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пицца Онлайн</title>
+    <link rel="stylesheet" href="../css/style-main.css">
+</head>
+<body>
+
+
+    <header>
+        <input type="checkbox" id="menu-toggle" hidden />
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        
+            <div class="brand-label">
+                <a href="/index.html">Пиццерия</a>
+            </div>
+        <div style="flex-grow: 1"></div> 
+        <div class="contact-info">
+            <a href="tel:+79999999999"><strong>+7 (999) 999-99-99</strong></a><br/>
+            Позвонить нам
+        </div>
+        <nav class="main-nav">
+            <a href="/pizzapedia.html">Пиццапедия</a>
+            <a href="/cart.html" class="icon-cart">
+                🛒
+                <span class="cart-details">
+                    <span class="total-sum">0 ₽</span>
+                    |
+                    <span class="item-count">0 шт.</span>
+                </span>
+            </a>
+            <a href="/register.html">Регистрация</a>
+            <a href="/log-in.html">Вход</a>
+        </nav>
+    </header>
+
+
+
+    <nav class="navbar">
+        <a href="#promotions" class="nav-item">
+            <span class="icon">🎉</span>
+            Акции
+        </a>
+        <!-- <a href="#new" class="nav-item">
+            <span class="icon">🆕</span>
+            Новинки
+        </a>
+        <a href="#hits" class="nav-item">
+            <span class="icon">🔥</span>
+            Хиты
+        </a> -->
+        <a href="#pizzas" class="nav-item">
+            <span class="icon">🍕</span>
+            Пиццы
+        </a>
+        <a href="#sets" class="nav-item">
+            <span class="icon">🍱</span>
+            Наборы
+        </a>
+        <a href="#drinks" class="nav-item">
+            <span class="icon">🥤</span>
+            Напитки
+        </a>
+        <a href="#sauces" class="nav-item">
+            <span class="icon">🍯</span>
+            Соусы
+        </a>
+        <a href="#desserts" class="nav-item">
+            <span class="icon">🍰</span>
+            Десерты
+        </a>
+    </nav>
+
+
+    <div id="promotions" class="promotions-section">
+    <h2>Акции</h2>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../src/pictures/promotion.webp" alt="Акция 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../src/pictures/promotion.webp" alt="Акция 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../src/pictures/promotion.webp" alt="Акция 3">
+            </div>
+            <div class="carousel-item">
+                <img src="../src/pictures/promotion.webp" alt="Акция 4">
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+        <button class="carousel-control next" onclick="nextSlide()">❯</button>
+    </div>
+    <div class="carousel-status">
+        <span id="status">1 / 4</span>
+    </div>
+    </div>
+
+
+
+    <div class="container" id="pizzas">
+        <h1>Пиццы</h1>
+        <div class="card-container" id="cardContainerPizza"></div>
+    </div>
+
+    <div class="container" id="sets">
+        <h1>Наборы</h1>
+        <div class="card-container" id="cardContainerSets"></div>
+    </div>
+
+    <div class="container" id="drinks">
+        <h1>Напитки</h1>
+        <div class="card-container" id="cardContainerDrinks"></div>
+    </div>
+
+    <div class="container" id="sauces">
+        <h1>Соусы</h1>
+        <div class="card-container" id="cardContainerSauces"></div>
+    </div>
+
+    <div class="container" id="desserts">
+        <h1>Десерты</h1>
+        <div class="card-container" id="cardContainerDeserts"></div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <img id="popupImage" src="" alt="">
+            <div class="content-and-close">
+                <div class="content">
+                    <h2 id="popupName"></h2>
+                    <p id="popupDescription"></p>
+                    <p><strong>Состав:</strong> <span id="popupComposition"></span></p>
+                    <br><br>
+                    <div class="select-container dough-select">
+                        <label>Тип основы:</label>
+                        <ul class="dough-list">
+                            <li>
+                                <button class="select-button traditional" data-type="traditional">Традиционная</button>
+                            </li>
+                            <li>
+                                <button class="select-button thin" data-type="thin">Тонкая</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <br><br>
+                    <div class="select-container size-select">
+                        <label>Диаметр:</label>
+                        <div class="horizontal-group" id="sizeContainer"></div>
+                    </div>
+                    <button id="addToCartButton">В корзину <span id="popupPrice">0</span> </button>
+                </div>
+                <button class="close-btn" id="closePopup">×</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="left-block">
+            <h2 class="logo">
+                <a href="/pages/index.html">Пиццерия</a>
+            </h2>
+            <div class="contact-info">
+                <p><a href="tel:+79999999999">+7(999) 999-99-99</a></p>
+                <span>Позвонить нам</span><br />
+                <a href="mailto:pizza@example.com">pizza@example.com</a>
+            </div>
+        </div>
+
+        <div class="right-block">
+            <div class="social-icons">
+                <a href="https://t.me" target="_blank"><img src="../src/icon/tg.svg" alt="Telegram" width="30"></a>
+                <a href="https://vk.com" target="_blank"><img src="../src/icon/vk.svg" alt="VK" width="30"></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2025 Все права защищены.
+        </div>
+    </footer>
+    
+    <script src="../js/product-base.js" type="module"></script>
+    <script src="../js/test2-copy.js" type="module"></script>
+    <script type="module" src="/js/headerupdate.js" ></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/slider.js"></script>
+</body>
+</html>
