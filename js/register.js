@@ -34,7 +34,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     }
 
     if(valid) {
-        window.location.href = "../gh-pages/index.html";
+        window.location.href = "/index.html";
     }
 });
 
